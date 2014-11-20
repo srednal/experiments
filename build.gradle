@@ -13,7 +13,6 @@ project.version = project.properties.projectVersion
 // The main useful bits:
 
 apply plugin: 'scala'
-
 defaultTasks 'clean', 'classes'
 
 dependencies {
@@ -36,7 +35,6 @@ dependencies {
 tasks.withType(ScalaCompile) {
     scalaCompileOptions.useAnt = false  // Zinc
 }
-
 
 //////////////////////////////////////////////////////////
 
