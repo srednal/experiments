@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/groups/public" }
+    }
+}
+buildscript.repositories.each { project.repositories.add(it) }
+
+project.group = project.properties.projectGroup
+project.version = project.properties.projectVersion
+
+/////////////////////////////////////////////////////////////////////
+// The main useful bits:
+
+apply plugin: 'scala'
+
+defaultTasks 'clean', 'classes'
+
+dependencies {
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.11.4'
+    compile group: 'org.scala-lang', name: 'scala-reflect', version: '2.11.4'
+    compile group: 'org.scala-lang', name: 'scalap', version: '2.11.4'
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: '2.3.6'
+
+    compile group: 'com.sksamuel.elastic4s', name: 'elastic4s_2.11', version: '1.3.2'
+
+    compile group: 'org.gnieh', name: 'sohva-client_2.11', version: '1.0.0'
+    compile group: 'net.liftweb', name: 'lift-json_2.11', version: '2.6-RC1'
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '9.3-1102-jdbc41'
+
+    compile group: 'io.spray', name: 'spray-caching_2.11', version: '1.3.2'
+
+}
+
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.useAnt = false  // Zinc
+}
+
+
+//////////////////////////////////////////////////////////
+
+wrapper {
+    gradleVersion = '2.1'
+}
