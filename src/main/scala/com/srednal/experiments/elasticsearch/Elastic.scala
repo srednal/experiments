@@ -1,8 +1,8 @@
-package com.srednal.snug.experiments.elasticsearch
+package com.srednal.experiments.elasticsearch
 
 import com.sksamuel.elastic4s.ElasticClient
 import com.sksamuel.elastic4s.ElasticDsl._
-import com.srednal.snug.experiments.{Moons, Planets}
+import com.srednal.experiments.{Moons, Planets}
 import org.elasticsearch.common.settings.ImmutableSettings
 import scala.collection.JavaConverters._
 

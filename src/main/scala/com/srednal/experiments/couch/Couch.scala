@@ -1,8 +1,8 @@
-package com.srednal.snug.experiments.couch
+package com.srednal.experiments.couch
 
 import akka.actor.ActorSystem
 import akka.util._
-import com.srednal.snug.experiments.{Moons, Planets}
+import com.srednal.experiments.{Moons, Planets}
 import scala.concurrent.duration._
 
 import gnieh.sohva._

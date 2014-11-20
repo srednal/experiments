@@ -1,6 +1,6 @@
-package com.srednal.snug.experiments.postgresql
+package com.srednal.experiments.postgresql
 
-import com.srednal.snug.experiments.{Moons, Planets}
+import com.srednal.experiments.{Moons, Planets}
 import org.postgresql.util.PGobject
 import java.sql._
 import scala.annotation.tailrec

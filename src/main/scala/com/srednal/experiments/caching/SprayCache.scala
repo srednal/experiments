@@ -1,4 +1,4 @@
-package com.srednal.snug.experiments.caching
+package com.srednal.experiments.caching
 
 import akka.util.Timeout
 import scala.concurrent.Future

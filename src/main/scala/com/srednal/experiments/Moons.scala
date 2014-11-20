@@ -1,4 +1,4 @@
-package com.srednal.snug.experiments
+package com.srednal.experiments
 
 case class Moon(name: String, planet: String)
 

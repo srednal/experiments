@@ -1,4 +1,4 @@
-package com.srednal.snug.experiments
+package com.srednal.experiments
 
 case class Planet(name: String,
                   number: Int,  // Mercury=0...
